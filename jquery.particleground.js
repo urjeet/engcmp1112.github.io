@@ -8,6 +8,7 @@
  * Inspired by http://requestlab.fr/ and http://disruptivebydesign.com/
  */
 
+/*
 ;(function(window, document) {
   "use strict";
   var pluginName = 'particleground';
@@ -51,10 +52,10 @@
     var paused = false;
 
     options = extend({}, window[pluginName].defaults, options);
-
+    */
     /**
      * Init
-     */
+    
     function init() {
       if (!canvasSupport) { return; }
 
@@ -94,10 +95,10 @@
       draw();
       hook('onInit');
     }
-
+     */
     /**
      * Style the canvas
-     */
+  
     function styleCanvas() {
       canvas.width = element.offsetWidth;
       canvas.height = element.offsetHeight;
@@ -105,10 +106,10 @@
       ctx.strokeStyle = options.lineColor;
       ctx.lineWidth = options.lineWidth;
     }
-
+    */
     /**
      * Draw particles
-     */
+    
     function draw() {
       if (!canvasSupport) { return; }
 
@@ -132,10 +133,10 @@
         raf = requestAnimationFrame(draw);
       }
     }
-
+    */
     /**
      * Add/remove particles.
-     */
+     
     function resizeHandler() {
       // Resize the canvas
       styleCanvas();
@@ -166,25 +167,25 @@
         particles[i].setStackPos(i);
       };
     }
-
+    */
     /**
      * Pause particle system
-     */
+    
     function pause() {
       paused = true;
     }
-
+    */
     /**
      * Start particle system
-     */
+    
     function start() {
       paused = false;
       draw();
     }
-
+    */
     /**
      * Particle
-     */
+    
     function Particle() {
       this.stackPos;
       this.active = true;
@@ -223,10 +224,10 @@
           break;
       }
     }
-
+      */
     /**
      * Draw particle
-     */
+    
     Particle.prototype.draw = function() {
       // Draw circle
       ctx.beginPath();
@@ -258,10 +259,10 @@
       ctx.stroke();
       ctx.closePath();
     }
-
+    */
     /**
      * update particle position
-     */
+    
     Particle.prototype.updatePosition = function() {
       if (options.parallax) {
         if (orientationSupport && !desktop) {
@@ -327,10 +328,10 @@
       this.position.x += this.speed.x;
       this.position.y += this.speed.y;
     }
-
+     */
     /**
      * Setter: particle stacking position
-     */
+    
     Particle.prototype.setStackPos = function(i) {
       this.stackPos = i;
     }
@@ -420,13 +421,14 @@
   }
 
 })(window, document);
-
+*/
 /**
  * requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
  * @see: http://paulirish.com/2011/requestanimationframe-for-smart-animating/
  * @see: http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
  * @license: MIT license
  */
+/*
 (function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -451,3 +453,4 @@
         clearTimeout(id);
       };
 }());
+*/
